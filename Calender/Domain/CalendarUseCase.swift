@@ -69,7 +69,7 @@ extension CalendarUseCase {
     
     private func conditionFourWeeks(_ year: Int, _ month: Int) -> Bool {
         let firstDayOfWeek = dayOfWeek(year, month, 1)
-        return month == 2 && !isLeapYear(year) && (firstDayOfWeek == 0)
+        return !isLeapYear(year) && month == 2 && (firstDayOfWeek == 0)
     }
     
     private func conditionSixWeeks(_ year: Int, _ month: Int) -> Bool {
