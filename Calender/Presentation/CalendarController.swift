@@ -20,12 +20,12 @@ class CalendarController: RequestForCalendar {
 
     var calendarLogic: CalendarLogic?
     
-    func requestDateManager(request: DateItems.ThisMonth.Request) {
-        calendarLogic?.dateManager(year: request.year, month: request.month)
-    }
-    
     func requestNumberOfWeeks(request: DateItems.ThisMonth.Request) {
         calendarLogic?.numberOfWeeks(year: request.year, month: request.month)
+    }
+    
+    func requestDateManager(request: DateItems.ThisMonth.Request) {
+        calendarLogic?.dateManager(year: request.year, month: request.month)
     }
     
     func requestDateManager(request: DateItems.MoveMonth.Request) {

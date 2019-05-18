@@ -33,8 +33,8 @@ class CalendarViewController: UIViewController, ViewLogic {
     
     //MARK: UI Parts
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBAction func prevBtn(_ sender: UIBarButtonItem) { tappedPrevBtn() }
-    @IBAction func nextBtn(_ sender: UIBarButtonItem) { tappedNextBtn() }
+    @IBAction func prevBtn(_ sender: UIBarButtonItem) { prevMonth() }
+    @IBAction func nextBtn(_ sender: UIBarButtonItem) { nextMonth() }
     
     //MARK: Initialize
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -90,12 +90,12 @@ class CalendarViewController: UIViewController, ViewLogic {
 //MARK:- Setting Button Items
 extension CalendarViewController {
     
-    private func tappedNextBtn() {
+    private func nextMonth() {
         monthCounter += 1
         commonSettingMoveMonth()
     }
     
-    private func tappedPrevBtn() {
+    private func prevMonth() {
         monthCounter -= 1
         commonSettingMoveMonth()
     }
